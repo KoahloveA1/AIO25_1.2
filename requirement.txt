@@ -1,0 +1,11 @@
+langchain
+langchain-community
+langchain-core
+langchain-huggingface
+transformers
+sentence-transformers
+faiss-cpu
+pypdf2
+numpy
+streamlit
+-e .
