@@ -3,6 +3,4 @@ faiss_index
 index_storage
 models
 src/__pycache__
-data
-data_pdf
 Chatbot_with_memory.egg-info

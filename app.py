@@ -59,6 +59,8 @@ def load_memory_retrival(user_name: str):
     'data/test_json.json'
     )
 
+
+
 def test_llm_conversation(firstTime = False, query = '', user_name ='', summary = False, apply_forget = False):
 
 
@@ -142,6 +144,53 @@ def test_llm_conversation(firstTime = False, query = '', user_name ='', summary 
 
     Dựa trên thông tin cá nhân và dữ kiện ở trên, hãy đưa ra câu trả lời phù hợp, đồng cảm và hữu ích. Nếu thông tin người không hữu ích hãy bỏ qua.
     """
+
+
+    # input = [
+    #     'personal_info',
+    #     'data',
+    #     'query'
+    # ]
+
+    # context = """
+    # Bạn là một trợ lý AI thông minh, thân thiện và biết đồng cảm.
+
+    # Thông tin cá nhân người dùng (nếu có):  
+    # {personal_info}
+
+    # Ngữ cảnh hoặc dữ kiện liên quan:  
+    # {data}
+
+    # Người dùng đang thể hiện cảm xúc hoặc chia sẻ nội tâm như sau:  
+    # {query}
+
+    # Hãy phản hồi một cách nhẹ nhàng, thấu hiểu và hữu ích. Tập trung vào việc đồng cảm, khuyến khích hoặc hướng dẫn tinh tế nếu phù hợp.  
+    # **Nếu nội dung mang tính cảm xúc mà không yêu cầu thông tin kỹ thuật hay tài liệu cụ thể (như PDF), hãy tránh đề cập đến file hay tài liệu.**  
+    # Mục tiêu là khiến người dùng cảm thấy được lắng nghe và hỗ trợ. Nếu câu hỏi bạn có thể trả lời được thì xin hãy trả lời.
+    # """
+
+    # input = [
+    #     'personal_info',
+    #     'query',
+    #     'context_data'
+    # ]
+
+    # context = """
+    # Bạn là một trợ lý AI thông minh, thân thiện và biết cách gợi ý phù hợp với người dùng.
+
+    # Thông tin cá nhân người dùng (nếu có):  
+    # {personal_info}
+
+    # Thông tin ngữ cảnh hoặc dữ kiện liên quan (nếu có):  
+    # {data}
+
+    # Người dùng chia sẻ sở thích hoặc thắc mắc như sau:  
+    # {query}
+
+    # Hãy đưa ra phản hồi thân thiện, gần gũi và hữu ích. Nếu người dùng thể hiện sở thích (như du lịch, đọc sách, khám phá...), hãy đề xuất một số ý tưởng hoặc hướng dẫn phù hợp với sở thích đó.
+
+    # Nếu là một câu hỏi hoặc đề nghị nhẹ nhàng, hãy phản hồi ngắn gọn, truyền cảm hứng và đúng trọng tâm. Mục tiêu là giúp người dùng cảm thấy được đồng hành và hỗ trợ theo cách tích cực.
+    # """
     template = llm_client.create_template(input, context)
     llm_client.build_model_with_template(template)
     response = llm_client.generate_output(query, data, personal_info)
