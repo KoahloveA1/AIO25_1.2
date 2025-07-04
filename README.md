@@ -56,7 +56,7 @@ venv\Scripts\activate         # Trên Windows
 ### ✅ Bước 5: Chạy ứng dụng
 
 ```bash
-streamlit run main.py
+streamlit run app.py
 ```
 
 ---
@@ -96,6 +96,6 @@ streamlit run main.py
 ## 🧑‍💻 Tác giả & Đóng góp
 
 - 👤 Lê Khoa
-- 📬 Liên hệ: [email@example.com](khoale11.work@gmail.com)
+- 📬 Liên hệ: [khoale11.work@gmail.com](khoale11.work@gmail.com)
 
 ---
